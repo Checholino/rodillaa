@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Good eveafternmoning! Welcome to my website.</h1>
+    <p>Ingresa el codigo:</p>
+    <input type="text" id="codeInput" placeholder="Escribe el código aquí">
+    <button onclick="checkCode()">Verificar</button>
+    <div id="message"></div>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('codeInput').value.trim();
+            const messageDiv = document.getElementById('message');
+            
+            if (code === 'milhoja') {
+                messageDiv.textContent = 'Colosenses 1:16-17 nos da una perspectiva en donde absolutamente todo, incluso una milhoja tiesa de hace 2 semanas -- siendo un manifiesto de la creatividad humana-- existe por Él, por medio de Él y para Él. Tú, y yo, estamos en la misma condición de esa milhoja. Que se haga su voluntad, no la mía, no la tuya, tampoco la nuestra. Dios te bendiga Xiuraldy.';
+                messageDiv.style.color = 'green';
+            } else if (code === 'astonishing1234') {
+                messageDiv.textContent = 'Una buena forma de entender el proceso de "acercarnos" a Dios es un límite matemático. Te lo explicaré: Un limite matemático piénsalo como una recta numérica. La recta tiene un valor de 0 a 1 y el objetivo es llegar al uno. Pero ojo, por cada "turno" se debe avanzar la mitad del trayecto (ir avanzando por mitades desde 1. El uno se divide en 2, 0.5 se divide en dos y así sucesivamente), es decir, de 0 a 0.5, de 0.5 a 0.75, de 0.75 a 0.875, de 0.875 a 0.9375... Pero... Es obvio que vamos a llegar a uno muy rápido, ¿no? Pues resulta que nos tomaría una eternidad llegar al entero 1. Así mismo pasa en nuestra relacion con Dios. "Sed Santos como yo soy Santo" dice el Señor; y si, avanzamos todos los días, es posible, solo que nunca podremos ser santos en el sentido de totalidad aquí en la tierra, pues seguimos pecando. Si no sabías este dato me debes una mandarina.';
+                messageDiv.style.color = 'blue';
+            } else if (code === '2RDDEOGW') {
+                messageDiv.textContent = 'No pensabas que iba a ser tan sencillo, ¿o si?';
+                messageDiv.style.color = 'yellow';
+            } else if (code === 'pista') {
+                messageDiv.textContent = 'Barco';
+                messageDiv.style.color = 'orange';
+            } else {
+                messageDiv.textContent = 'Código incorrecto. Intenta de nuevo.';
+                messageDiv.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
